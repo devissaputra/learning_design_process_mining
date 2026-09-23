@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learning-design-process-mining"
+version = "0.1.0"
+description = "Process-mining tools for studying how instructors and AI move from learning goals to activities, assessment, and revision."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Devis W. Saputra"}]
+dependencies = ["numpy>=1.26","pandas>=2.0","scikit-learn>=1.4","matplotlib>=3.8","PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0","ruff>=0.6"]
+
+[project.scripts]
+learning-design-process-mining = "learning_design_process_mining.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

@@ -1,0 +1,10 @@
+stage,next_stage,count,share_from_stage
+activity,content,80,0.625
+activity,review,48,0.375
+assessment,activity,80,0.7407407407407407
+assessment,release,28,0.25925925925925924
+content,activity,48,0.6
+content,review,32,0.4
+goals,assessment,80,1.0
+review,assessment,28,0.35
+review,release,52,0.65
