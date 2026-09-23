@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml)
 
+
+**Category:** AI in Education
 **Process-mining tools for studying how instructors and AI move from learning goals to activities, assessment, and revision.**
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
@@ -12,7 +14,7 @@
 
 Learning design is usually documented as a final artifact, which hides the design process. This repo treats instructional design work as an event log so researchers can study iteration, bottlenecks, rework, and human–AI handoffs across the design lifecycle.
 
-The engineering goal is simple: make the research logic inspectable. Every metric in the demo can be traced back to a small function, the demo data can be regenerated from a fixed seed, and the limitations are stated next to the claims rather than buried at the end.
+The event-log representation makes design work analyzable without assuming there is one correct instructional-design path. Trace extraction, transition analysis, and rework measures stay explicit so process claims can be checked against the underlying events.
 
 ## Research questions
 
@@ -32,7 +34,7 @@ The reference pipeline follows five stages:
 4. **Variant analysis**
 5. **Bottleneck analysis**
 
-The current implementation is deliberately compact enough to audit. It is a foundation for a real study, not a theatrical “AI demo.”
+The baseline stays lightweight so process assumptions can be audited before importing logs from authoring tools or real design teams.
 
 ## Core outputs
 
