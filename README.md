@@ -1,5 +1,7 @@
 # Learning Design Process Mining
 
+[![CI](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml)
+
 **Process-mining tools for studying how instructors and AI move from learning goals to activities, assessment, and revision.**
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
