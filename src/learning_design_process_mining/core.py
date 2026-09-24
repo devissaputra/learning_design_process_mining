@@ -14,7 +14,8 @@ def transition_table(events:pd.DataFrame)->pd.DataFrame:
 def transition_entropy(events:pd.DataFrame)->float:
     t=transition_table(events); vals=[]
     for _,g in t.groupby('stage'):
-        p=g.share_from_stage.to_numpy(); vals.append(-float((p*(p.clip(1e-12).__array__().astype(float))).sum()) if False else -float(sum(x*math.log2(x) for x in p if x>0)))
+        p=g.share_from_stage.to_numpy()
+        vals.append(-float(sum(x * math.log2(x) for x in p if x > 0)))
     return float(sum(vals)/len(vals)) if vals else 0.0
 
 def rework_rate(events:pd.DataFrame)->float:
