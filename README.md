@@ -19,12 +19,12 @@ The event-log representation makes design work analyzable without assuming there
 ## Research questions
 
 1. Which design paths occur most often from objective-setting to release?
-2. Where do designers loop back or stall?
-3. How does AI assistance change iteration patterns without assuming that fewer steps are automatically better?
+2. Where do design traces revisit earlier stages?
+3. How often do AI-assistant events appear in the synthetic design traces?
 
 ## What the repository does
 
-![Pipeline](docs/images/pipeline.png)
+![Pipeline](docs/images/pipeline.svg)
 
 The reference pipeline follows five stages:
 
@@ -82,7 +82,7 @@ learning_design_process_mining/
 
 ## Research design in one picture
 
-![Research map](docs/images/research_map.png)
+![Research map](docs/images/research_map.svg)
 
 The fuller design rationale is in [`docs/research_design.md`](docs/research_design.md), including constructs, assumptions, validation steps, and a proposed empirical extension.
 
