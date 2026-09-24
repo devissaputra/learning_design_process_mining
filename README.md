@@ -2,17 +2,16 @@
 
 [![CI](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml)
 
-
-**Category:** AI in Education
+**Category:** AI in Education  
 **Process-mining tools for studying how instructors and AI move from learning goals to activities, assessment, and revision.**
 
-> Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, or institutions.
+> Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, design teams, or institutions.
 
-![Architecture](docs/images/architecture.png)
+![Architecture](docs/images/architecture.svg)
 
 ## Why this project exists
 
-Learning design is usually documented as a final artifact, which hides the design process. This repo treats instructional design work as an event log so researchers can study iteration, bottlenecks, rework, and human–AI handoffs across the design lifecycle.
+Learning design is usually documented as a final artifact, which hides the design process. This repository treats instructional-design work as an event log so researchers can study trace variants, transitions, iteration, rework, and human–AI handoffs across the design lifecycle.
 
 The event-log representation makes design work analyzable without assuming there is one correct instructional-design path. Trace extraction, transition analysis, and rework measures stay explicit so process claims can be checked against the underlying events.
 
@@ -26,15 +25,15 @@ The event-log representation makes design work analyzable without assuming there
 
 ![Pipeline](docs/images/pipeline.svg)
 
-The reference pipeline follows five stages:
+The implemented pipeline follows five stages:
 
 1. **Design event log**
 2. **Trace extraction**
-3. **Transition graph**
-4. **Variant analysis**
-5. **Bottleneck analysis**
+3. **Transition table**
+4. **Variant, entropy, and rework metrics**
+5. **Descriptive process report**
 
-The baseline stays lightweight so process assumptions can be audited before importing logs from authoring tools or real design teams.
+The baseline stays lightweight so its assumptions can be audited before adding duration-based bottleneck detection, conformance checking, or logs from real authoring environments.
 
 ## Core outputs
 
@@ -43,9 +42,9 @@ The baseline stays lightweight so process assumptions can be audited before impo
 - `rework_rate`
 - `ai_handoff_rate`
 
-![Synthetic demo dashboard](docs/images/demo_dashboard.png)
+![Synthetic demo dashboard](docs/images/demo_dashboard.svg)
 
-The dashboard above is generated from **synthetic data** and is included only to show what the analysis surface looks like. It is not a reported empirical result.
+The dashboard is generated from **synthetic data** and is included only to demonstrate the analysis surface. It is not a reported empirical result.
 
 ## Quick start
 
@@ -68,12 +67,12 @@ docker run --rm learning_design_process_mining
 
 ```text
 learning_design_process_mining/
-├── src/learning_design_process_mining/        # core implementation and synthetic-data generator
-├── examples/demo.py        # end-to-end reproducible demo
-├── tests/                  # executable unit tests
-├── docs/                   # research design, data dictionary, references
-│   └── images/             # original project diagrams and demo visualisations
-├── results/                # synthetic demo outputs only
+├── src/learning_design_process_mining/  # core implementation and synthetic-data generator
+├── examples/demo.py                     # end-to-end reproducible demo
+├── tests/                               # executable unit tests
+├── docs/                                # research design, data dictionary, references
+│   └── images/                          # auditable project diagrams
+├── results/                             # synthetic demo outputs only
 ├── config/default.yaml
 ├── Dockerfile
 ├── Makefile
@@ -99,16 +98,18 @@ The fuller design rationale is in [`docs/research_design.md`](docs/research_desi
 - Process efficiency is not the same as design quality.
 - The synthetic event taxonomy is intentionally small and should be adapted to the local design process.
 - AI handoffs are logged as events; this repo does not claim they improve outcomes.
+- The current baseline does not estimate duration-based bottlenecks.
 
 ## Strong next experiments
 
 - Import xAPI or workflow logs from real authoring environments.
+- Add timestamp-duration analysis for explicit bottleneck definitions.
 - Add conformance checking against a chosen instructional-design model.
 - Link process variants to expert review of final learning-design quality.
 
 ## References
 
-See [`docs/references.md`](docs/references.md). The references are there to locate the project in current AIED, learning-analytics, human-centered AI, and instructional-design research. They do **not** imply endorsement or affiliation.
+See [`docs/references.md`](docs/references.md). The references locate the project in current AIED, learning-analytics, human-centered AI, and instructional-design research. They do **not** imply endorsement or affiliation.
 
 ## Citation
 
