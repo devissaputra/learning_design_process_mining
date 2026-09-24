@@ -41,7 +41,6 @@ The baseline stays lightweight so process assumptions can be audited before impo
 - `variant_count`
 - `transition_entropy`
 - `rework_rate`
-- `median_stage_duration`
 - `ai_handoff_rate`
 
 ![Synthetic demo dashboard](docs/images/demo_dashboard.png)
