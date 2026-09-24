@@ -2,21 +2,21 @@
 
 ## Project aim
 
-Learning design is usually documented as a final artifact, which hides the design process. This repo treats instructional design work as an event log so researchers can study iteration, bottlenecks, rework, and human–AI handoffs across the design lifecycle.
+Learning design is usually documented as a final artifact, which hides the design process. This repo treats instructional design work as an event log so researchers can study trace variants, transitions, rework, and the share of AI-assistant events across the synthetic design lifecycle.
 
 ## Research questions
 
 1. Which design paths occur most often from objective-setting to release?
-2. Where do designers loop back or stall?
-3. How does AI assistance change iteration patterns without assuming that fewer steps are automatically better?
+2. Where do design traces revisit earlier stages?
+3. How often do AI-assistant events appear in the synthetic design traces?
 
 ## Baseline analytic pipeline
 
 1. Design event log
 2. Trace extraction
-3. Transition graph
-4. Variant analysis
-5. Bottleneck analysis
+3. Transition table
+4. Variant and transition-entropy analysis
+5. Rework and AI-handoff summary
 
 ## Construct-to-measure discipline
 
