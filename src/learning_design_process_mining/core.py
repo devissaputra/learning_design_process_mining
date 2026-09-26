@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# P(next|stage) = transition count / outgoing count; H(stage) = -sum p log2 p.
+# Entropy is averaged equally across source stages. Rework is repeated-stage events divided by events within a case, then averaged over cases. Repetition may be productive revision rather than waste.
+
 from __future__ import annotations
 from collections import Counter
 import math, pandas as pd

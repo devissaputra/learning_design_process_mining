@@ -1,5 +1,21 @@
 # Learning Design Process Mining
 
+This process-mining prototype reconstructs instructional-design traces from synthetic event logs. It reports common variants, stage-to-stage transition shares, entropy, and a clearly defined repetition rate, making workflow differences visible without calling every revision inefficient. The calculations support process inspection; real conclusions would require authentic logs and a defensible interpretation of stage labels.
+
+## Start here
+
+- [Calculations, evidence and verification scope](CALCULATIONS.md)
+- [Figure sources and exact numerical paths](docs/figure_spec.json)
+- [Data status](data/README.md)
+
+![Study question, data, design and interpretation](assets/review_overview.svg)
+
+![Defined calculation and source-linked evidence](assets/review_calculations.svg)
+
+**Review scope:** The existing suite requires unavailable dependencies; no full-suite pass is claimed. The bundled demonstration executed successfully in this review.
+
+## Detailed project documentation
+
 [![CI](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learning_design_process_mining/actions/workflows/ci.yml)
 
 **Category:** AI in Education  
@@ -7,7 +23,6 @@
 
 > Research prototype. All bundled data and results are synthetic demonstrations. Nothing in this repository should be interpreted as evidence about real learners, teachers, design teams, or institutions.
 
-![Architecture](docs/images/architecture.svg)
 
 ## Why this project exists
 
@@ -23,7 +38,6 @@ The event-log representation makes design work analyzable without assuming there
 
 ## What the repository does
 
-![Pipeline](docs/images/pipeline.svg)
 
 The implemented pipeline follows five stages:
 
@@ -42,7 +56,6 @@ The baseline stays lightweight so its assumptions can be audited before adding d
 - `rework_rate`
 - `ai_handoff_rate`
 
-![Synthetic demo dashboard](docs/images/demo_dashboard.svg)
 
 The dashboard is generated from **synthetic data** and is included only to demonstrate the analysis surface. It is not a reported empirical result.
 
@@ -81,7 +94,6 @@ learning_design_process_mining/
 
 ## Research design in one picture
 
-![Research map](docs/images/research_map.svg)
 
 The fuller design rationale is in [`docs/research_design.md`](docs/research_design.md), including constructs, assumptions, validation steps, and a proposed empirical extension.
 

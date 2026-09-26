@@ -1,0 +1,42 @@
+{
+  "question": "Where does instructional-design work repeat or branch?",
+  "data": "Synthetic timestamped design-event logs, grouped into cases.",
+  "method": "Order events within cases; count trace variants and next-stage transitions; calculate rework and transition entropy.",
+  "formula": "P(next|stage) = transition count / outgoing count; H(stage) = -sum p log2 p.",
+  "interpretation": "Entropy is averaged equally across source stages. Rework is repeated-stage events divided by events within a case, then averaged over cases. Repetition may be productive revision rather than waste.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/demo_metrics.json",
+  "rows": [
+    {
+      "label": "variant_count",
+      "path": [
+        "variant_count"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "transition_entropy",
+      "path": [
+        "transition_entropy"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "rework_rate",
+      "path": [
+        "rework_rate"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "ai_handoff_rate",
+      "path": [
+        "ai_handoff_rate"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Selected recorded values (units and context shown)",
+  "evidence_note": "See CALCULATIONS.md for data status, execution scope and interpretation.",
+  "finding": "This process-mining prototype reconstructs instructional-design traces from synthetic event logs. It reports common variants, stage-to-stage transition shares, entropy, and a clearly defined repetition rate, making workflow differences visible without calling every revision inefficient. The calculations support process inspection; real conclusions would require authentic logs and a defensible interpretation of stage labels."
+}
